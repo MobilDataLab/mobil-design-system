@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Mobil Arquitectos — Design System v3
+   Root stylesheet. This file is a manifest of @import lines ONLY.
+   Consumers link THIS one file. Everything reachable from here ships.
+
+   Source brand spec: MobilDataLab/mobil-design-system (docs/claude-design.md)
+   ========================================================================== */
+
+@import url("./tokens/fonts.css");
+@import url("./tokens/colors.css");
+@import url("./tokens/typography.css");
+@import url("./tokens/spacing.css");
