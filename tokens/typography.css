@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Mobil Arquitectos — Typography tokens (Design System v3)
+   Two families only. Condensed for ALL headings/titles/labels (uppercase for
+   titles); Roboto for body ONLY. Modular scale, ratio 1.25.
+   ========================================================================== */
+
+:root {
+  /* ── Families ── */
+  --font-heading: "Swis721 Cn BT", "Archivo Narrow", "Arial Narrow", sans-serif;
+  --font-body:    Roboto, Arial, system-ui, sans-serif;
+
+  /* ── Weights — condensed (headings) ── */
+  --fw-light:   300; /* @kind font */
+  --fw-regular: 400; /* @kind font */
+  --fw-bold:    700; /* @kind font */
+  --fw-black:   900; /* @kind font */
+
+  /* ── Weights — body ── */
+  --fw-body:      400; /* @kind font */
+  --fw-body-bold: 700; /* @kind font */
+
+  /* ── Modular scale (ratio 1.25) ── */
+  --fs-display: 76px;   /* hero numbers, covers      — Light */
+  --fs-h1:      61px;   /* main title                — Light */
+  --fs-h2:      49px;   /* section title             — Regular */
+  --fs-h3:      39px;   /* subtitle                  — Regular */
+  --fs-h4:      31px;   /* block title               — Regular */
+  --fs-h5:      25px;   /* large highlight           — Regular */
+  --fs-h6:      20px;   /* column title              — Regular */
+  --fs-body:    16px;   /* body text (Roboto)        — Regular */
+  --fs-small:   13px;   /* footnotes                 — Regular */
+  --fs-caption: 10px;   /* credits, micro-text       — Regular */
+
+  /* ── Line-height ── */
+  --lh-heading: 1.15; /* @kind font */
+  --lh-body:    1.5; /* @kind font */
+
+  /* ── Tracking ── */
+  --tracking-title:  0.01em;   /* condensed uppercase titles */
+  --tracking-vertical: 0.35em; /* vertical letterspaced margin text */
+}
+
+/* ── Heading helper classes ── */
+.ds-display, .ds-h1, .ds-h2, .ds-h3, .ds-h4, .ds-h5, .ds-h6 {
+  font-family: var(--font-heading);
+  line-height: var(--lh-heading);
+  color: var(--text-primary);
+  margin: 0;
+  text-wrap: balance;
+}
+.ds-display { font-size: var(--fs-display); font-weight: var(--fw-light); text-transform: uppercase; letter-spacing: var(--tracking-title); }
+.ds-h1 { font-size: var(--fs-h1); font-weight: var(--fw-light);  text-transform: uppercase; letter-spacing: var(--tracking-title); }
+.ds-h2 { font-size: var(--fs-h2); font-weight: var(--fw-regular);  text-transform: uppercase; letter-spacing: var(--tracking-title); }
+.ds-h3 { font-size: var(--fs-h3); font-weight: var(--fw-regular);  text-transform: uppercase; letter-spacing: var(--tracking-title); }
+.ds-h4 { font-size: var(--fs-h4); font-weight: var(--fw-regular); }
+.ds-h5 { font-size: var(--fs-h5); font-weight: var(--fw-regular); }
+.ds-h6 { font-size: var(--fs-h6); font-weight: var(--fw-regular); text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ── Body helper classes ── */
+.ds-body, .ds-small, .ds-caption {
+  font-family: var(--font-body);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  text-align: left;
+}
+.ds-body    { font-size: var(--fs-body); font-weight: var(--fw-body); }
+.ds-small   { font-size: var(--fs-small); font-weight: var(--fw-body); color: var(--text-secondary); }
+.ds-caption { font-size: var(--fs-caption); font-weight: var(--fw-body); color: var(--text-caption); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.ds-link { color: var(--text-link); text-decoration: none; border-bottom: 1px solid currentColor; }
+.ds-link:hover { color: var(--blue); }

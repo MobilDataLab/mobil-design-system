@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 960" width="56" height="64">
+  <g fill="none" stroke="#006BFF" stroke-width="24" stroke-linecap="square" stroke-linejoin="miter">
+    <line x1="420" y1="30" x2="809.71" y2="255"></line>
+    <line x1="809.71" y1="255" x2="809.71" y2="705"></line>
+    <line x1="809.71" y1="705" x2="420" y2="930"></line>
+    <line x1="420" y1="930" x2="30.29" y2="705"></line>
+    <line x1="30.29" y1="705" x2="30.29" y2="255"></line>
+    <line x1="30.29" y1="255" x2="420" y2="30"></line>
+    <line x1="420" y1="480" x2="420" y2="30"></line>
+    <line x1="420" y1="480" x2="809.71" y2="255"></line>
+    <line x1="420" y1="480" x2="809.71" y2="705"></line>
+    <line x1="420" y1="480" x2="420" y2="930"></line>
+    <line x1="420" y1="480" x2="30.29" y2="705"></line>
+    <line x1="420" y1="480" x2="30.29" y2="255"></line>
+  </g>
+</svg>

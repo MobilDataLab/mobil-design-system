@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="12-column grid" subtitle="The grid is a visible structural element" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--white); padding: 24px; box-sizing: border-box; }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px; }
+  .col { height: 80px; background: var(--blue-tint); border-top: 4px solid var(--blue); display: flex; align-items: flex-start; justify-content: center; padding-top: 6px; }
+  .col span { font-family: var(--font-body); font-size: 10px; color: var(--blue-strong); font-variant-numeric: tabular-nums; }
+  .cap { font-size: 11px; color: var(--gray-700); margin: 0 0 14px; }
+  .cap b { color: var(--ink); font-family: var(--font-heading); text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <p class="cap"><b>12 columns</b> · 24px gutter · 48px margin — visible structure, like a building's frame</p>
+  <div class="grid">
+    <div class="col"><span>1</span></div><div class="col"><span>2</span></div><div class="col"><span>3</span></div>
+    <div class="col"><span>4</span></div><div class="col"><span>5</span></div><div class="col"><span>6</span></div>
+    <div class="col"><span>7</span></div><div class="col"><span>8</span></div><div class="col"><span>9</span></div>
+    <div class="col"><span>10</span></div><div class="col"><span>11</span></div><div class="col"><span>12</span></div>
+  </div>
+</body>
+</html>

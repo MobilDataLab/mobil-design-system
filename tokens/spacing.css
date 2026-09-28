@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Mobil Arquitectos — Spacing, shape & layout tokens (Design System v3)
+   Rectilinear and grid-driven. border-radius: 0 EVERYWHERE. No shadows,
+   no gradients, no decorative effects. Flat surfaces only.
+   ========================================================================== */
+
+:root {
+  /* ── Spacing scale (4px base) ── */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ── Shape — sharp, architectural ── */
+  --radius: 0;            /* zero radius everywhere. No exceptions. */
+
+  /* ── Rules / bars ── */
+  --rule-thin:  1px;      /* hairline dividers, borders */
+  --rule-thick: 4px;      /* brand bar, section accents */
+
+  /* ── Layout ── */
+  --grid-columns: 12; /* @kind other */
+  --grid-gutter:  24px;
+  --grid-margin:  48px;
+  --content-max:  1440px;
+  --header-height: 60px;
+
+  /* No shadow tokens by design — the system is flat. If elevation is ever
+     unavoidable (e.g. a transient menu), use a single hairline border, not
+     a shadow. */
+}
+
+/* ── 12-column grid helper (the grid is a visible structural element) ── */
+.ds-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gutter);
+}
