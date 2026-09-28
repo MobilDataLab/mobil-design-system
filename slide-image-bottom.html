@@ -1,0 +1,21 @@
+<!-- @dsCard group="Slides" viewport="1920x1080" name="Imagen inferior" subtitle="Título arriba, imagen a todo el ancho en la mitad inferior" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slide.css">
+<script src="image-slot.js"></script>
+</head>
+<body>
+<div class="slide pad" data-screen-label="Imagen inferior">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:96px">
+<div><div class="eyebrow">Intermodal Puente Alto Sur</div>
+<h2 class="h2">Acceso por la plaza</h2></div>
+<span style="font-size:24px;color:var(--gray-700);padding-bottom:12px">20</span>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:0;height:700px"><image-slot id="bottom-photo" shape="rect" placeholder="Imagen panorámica a todo el ancho"></image-slot></div>
+<div class="bar" style="bottom:700px"></div>
+</div>
+</body>
+</html>

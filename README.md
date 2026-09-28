@@ -1,38 +1,35 @@
-# Mobil Arquitectos — Design System v3.1
+# Presentaciones
 
-Sistema único de marca para web, presentaciones y documentos. Los tokens se definen una sola vez en `tokens/`; cada capítulo los consume, nunca los copia.
+Layouts de referencia a 1920×1080. Cada archivo es una lámina; cópialos y reemplaza textos e imágenes. Las fotos van en `<image-slot>`: arrastra la imagen sobre el recuadro.
 
-## Estructura
+## Láminas
 
-| Carpeta | Contenido |
-|---|---|
-| `tokens/` | Fuente única: color, tipografía, espaciado, fuentes. `tokens.json` para herramientas, `*.css` para web. |
-| `assets/` | Logo hexagonal (`mobil-mark.svg`, `MobilMark.tsx`) y fuentes Swiss721 Condensed. |
-| `styles.css` | Entrada CSS raíz: importa todos los tokens. |
-| `foundations/` | Reglas comunes a todos los medios: color, tipo, espaciado, logo, motivos. `claude-design.md` = especificación de marca. |
-| `web/` | Componentes React (forms, feedback, data), bundle compilado, UI kit Mobil Carga. |
-| `presentaciones/` | Layouts de slide: portada, sección, datos, full-bleed. |
-| `documentos/` | Plantillas Word/PDF (en preparación). |
-| `docs/` | Historial de decisiones. |
+- `slide-cover.html` — **Portada azul.** Presentaciones institucionales o internas sin foto de proyecto.
+- `slide-cover-photo.html` — **Portada con foto.** Concursos, propuestas y entregas donde hay una imagen fuerte del proyecto.
+- `slide-index.html` — **Índice.** Después de la portada, en presentaciones de tres capítulos o más.
+- `slide-section.html` — **Separador de sección.** Abre cada capítulo; repite el número del índice.
+- `slide-quote.html` — **Cita / claim.** Una sola frase que resume la postura; máximo una por presentación.
+- `slide-text-2col.html` — **Texto en 2 columnas.** Memorias y explicaciones que necesitan más de un párrafo.
+- `slide-text-callout.html` — **Texto + destacado.** Cuando un argumento tiene una conclusión que el mandante debe recordar.
+- `slide-columns.html` — **3–4 columnas.** Temas paralelos del mismo peso: talleres, criterios, alternativas.
+- `slide-image-side.html` — **Imagen lateral.** Un recinto o detalle que se explica con una foto o render vertical.
+- `slide-image-bottom.html` — **Imagen inferior.** Panorámicas, elevaciones y cortes largos.
+- `slide-fullbleed.html` — **Foto a sangre · caso.** Presentar un proyecto construido con una sola imagen.
+- `slide-data.html` — **Datos / KPI.** Tres o cuatro cifras con un hallazgo en amarillo.
+- `slide-projects.html` — **Grilla de proyectos.** Experiencia previa en licitaciones: 2–3 proyectos con ficha técnica.
+- `slide-gantt.html` — **Carta Gantt.** Plan de trabajo por etapas; meses en columnas, hitos en amarillo.
+- `slide-contact.html` — **Contacto.** Penúltima lámina de propuestas y licitaciones.
+- `slide-closing.html` — **Cierre.** Última lámina de toda presentación.
 
-## Reglas
+Estilos compartidos: `slide.css` (usa solo tokens de `styles.css`). Placeholders de imagen: `image-slot.js`.
 
-1. Un cambio de marca se hace en `tokens/` y se propaga a todos los capítulos.
-2. Cada capítulo define solo sus reglas propias de medio (tamaños mínimos, márgenes, formatos).
-3. Una sola versión para todo el sistema. Ver `CHANGELOG.md`.
+## Reglas del medio
 
-## Uso web
-
-```html
-<link rel="stylesheet" href="styles.css">
-<script src="web/_ds_bundle.js"></script>
-<script>
-  const { Button, Card } = window.MobilArquitectosDesignSystem_8d3ff0;
-</script>
-```
-
-## Fundamentos resumidos
-
-- **Color:** linaje azul único desde `#006BFF`; acento amarillo `#FFF81D` solo para callouts; neutros fríos `#1A1A1A` → gray-50.
-- **Tipo:** Swis721 Cn BT (títulos, mayúsculas) + Roboto (cuerpo). Escala modular 1.25.
-- **Forma:** `border-radius: 0`. Reglas de 1px y 4px. Sin sombras ni gradientes.
+- Texto nunca menor a 24px a 1920×1080.
+- Máximo 1–2 colores de fondo por presentación (blanco, azul `#006BFF`, ink).
+- Títulos en Swis721 Cn, mayúsculas, alineados a la izquierda (la cita es la única lámina centrada).
+- Títulos grandes en Light o Regular; Bold solo en etiquetas pequeñas.
+- Texto sobre foto: velo ink 60% sólido, nunca degradado.
+- Logo siempre desde `assets/logo/mobil-mark.svg`; no redibujar.
+- Cierre de sección con barra de 4px azul o amarilla.
+- Sin sombras, degradados ni esquinas redondeadas.

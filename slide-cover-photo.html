@@ -1,0 +1,26 @@
+<!-- @dsCard group="Slides" viewport="1920x1080" name="Portada con foto" subtitle="Foto a sangre, velo ink 60% a la izquierda, título blanco" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="slide.css">
+<script src="image-slot.js"></script>
+</head>
+<body>
+<div class="slide onphoto" data-screen-label="Portada con foto">
+<div style="position:absolute;inset:0"><image-slot id="cover-photo" shape="rect" placeholder="Foto del proyecto a sangre"></image-slot></div>
+<div class="veil" style="top:0;bottom:0;left:0;width:960px"></div>
+<div style="position:absolute;top:96px;bottom:0;left:96px;width:768px;display:flex;flex-direction:column;color:var(--white);pointer-events:none">
+<img class="mark w" src="../assets/logo/mobil-mark.svg" alt="Mobil Arquitectos">
+<div style="margin-top:auto;margin-bottom:200px">
+<div class="eyebrow" style="color:var(--yellow)">Concurso de arquitectura · Octubre 2026</div>
+<h1 class="h1" style="font-size:150px">Cesfam<br>Quilicura<br>Norte</h1>
+<p class="lead" style="margin-top:32px">Propuesta de arquitectura y especialidades para el Servicio de Salud Metropolitano Norte.</p>
+</div>
+</div>
+<div class="foot"><span>Mobil Arquitectos</span><span>Santiago, octubre 2026</span></div>
+<div class="bar"></div>
+</div>
+</body>
+</html>
