@@ -1,0 +1,29 @@
+<!-- @dsCard group="Type" viewport="700x230" name="Two families" subtitle="Swis721 Cn BT for headings (uppercase), Roboto for body only" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--white); padding: 22px 24px; box-sizing: border-box; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .col h4 { margin: 0 0 4px; font-family: var(--font-heading); text-transform: uppercase; font-size: 11px; letter-spacing: 0.1em; color: var(--blue-strong); }
+  .head-spec { font-family: var(--font-heading); text-transform: uppercase; font-weight: 300; font-size: 38px; line-height: 1.05; color: var(--ink); }
+  .head-meta { font-size: 11px; color: var(--gray-700); margin-top: 8px; line-height: 1.5; }
+  .body-spec { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--ink); }
+  .body-meta { font-size: 11px; color: var(--gray-700); margin-top: 8px; }
+  code { font-family: var(--font-body); background: var(--gray-50); padding: 1px 4px; }
+</style>
+</head>
+<body>
+  <div class="col">
+    <h4>Headings — condensed</h4>
+    <div class="head-spec">Somos Mobil</div>
+    <div class="head-meta">Swis721 Cn BT · Light / Regular / Bold / Black.<br>Large titles set Light–Regular; Bold is reserved for small labels. Web fallback: <code>Archivo Narrow</code>.</div>
+  </div>
+  <div class="col">
+    <h4>Body — Roboto</h4>
+    <div class="body-spec">Estudio chileno de arquitectura y diseño urbano, especializado en infraestructura hospitalaria y de metro.</div>
+    <div class="body-meta">Roboto 400 / 700. Body text only — never condensed for paragraphs, never body font for headings. Always left-aligned.</div>
+  </div>
+</body>
+</html>

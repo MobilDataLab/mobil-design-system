@@ -1,0 +1,37 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="Cover slide" subtitle="Solid blue, hexagon mark outline, condensed title (motif 4)" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; }
+  .slide { width: 1280px; height: 720px; background: var(--blue); color: #fff; position: relative; overflow: hidden; font-family: var(--font-body); }
+  .mark { position: absolute; top: 64px; left: 64px; }
+  .vmargin { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-family: var(--font-heading); text-transform: uppercase; font-size: 14px; letter-spacing: 0.35em; color: rgba(255,255,255,0.6); }
+  .body { position: absolute; left: 64px; bottom: 120px; }
+  .eyebrow { font-family: var(--font-heading); text-transform: uppercase; font-size: 18px; letter-spacing: 0.2em; color: rgba(255,255,255,0.85); margin-bottom: 16px; }
+  .title { font-family: var(--font-heading); text-transform: uppercase; font-weight: 300; font-size: 132px; line-height: 0.92; letter-spacing: 0.02em; margin: 0; }
+  .sub { font-family: var(--font-body); font-size: 20px; color: rgba(255,255,255,0.9); margin-top: 22px; max-width: 620px; line-height: 1.5; }
+  .footer { position: absolute; left: 64px; right: 64px; bottom: 48px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.7); letter-spacing: 0.04em; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--yellow); }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <svg class="mark" viewBox="0 0 840 960" width="78" height="89">
+      <g fill="none" stroke="#FFFFFF" stroke-width="24" stroke-linecap="square">
+        <line x1="420" y1="30" x2="809.71" y2="255"/><line x1="809.71" y1="255" x2="809.71" y2="705"/><line x1="809.71" y1="705" x2="420" y2="930"/><line x1="420" y1="930" x2="30.29" y2="705"/><line x1="30.29" y1="705" x2="30.29" y2="255"/><line x1="30.29" y1="255" x2="420" y2="30"/><line x1="420" y1="480" x2="420" y2="30"/><line x1="420" y1="480" x2="809.71" y2="255"/><line x1="420" y1="480" x2="809.71" y2="705"/><line x1="420" y1="480" x2="420" y2="930"/><line x1="420" y1="480" x2="30.29" y2="705"/><line x1="420" y1="480" x2="30.29" y2="255"/>
+      </g>
+    </svg>
+    <span class="vmargin">Mobil Arquitectos</span>
+    <div class="body">
+      <div class="eyebrow">Saturación de Talleres · 2026</div>
+      <h1 class="title">Somos<br>Mobil</h1>
+      <p class="sub">Arquitectura y diseño urbano. Infraestructura hospitalaria, metro, uso mixto y vivienda social.</p>
+    </div>
+    <div class="footer"><span>DataLab · Laboratorio de Data</span><span>Santiago de Chile</span></div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>

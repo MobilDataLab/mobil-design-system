@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Data display" subtitle="Card, KpiTile, StatBar, Tabs" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-body); background: var(--gray-50); padding: 22px 24px; box-sizing: border-box; }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
+  .bars { display: flex; flex-direction: column; gap: 12px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { Card, KpiTile, StatBar, Tabs } = window.MobilArquitectosDesignSystem_8d3ff0;
+    function Demo() {
+      return (
+        <div>
+          <div className="kpis">
+            <KpiTile label="Venta total" value="12.4k" unit="UF" delta="+4.2%" accent="brand" />
+            <KpiTile label="Saturación prom." value="0.82" delta="+0.06" accent="warning" />
+            <KpiTile label="Proyectos" value="34" hint="6 en meta" />
+          </div>
+          <Card title="Saturación por socio" sub="Año fiscal 2026" accent>
+            <Tabs items={[{id:"a",label:"Proyectos"},{id:"b",label:"Ocupación",badge:5}]} style={{marginBottom:16}} />
+            <div className="bars">
+              <StatBar label="P. Bravo" value={1.12} critical={1} />
+              <StatBar label="S. Marín" value={0.78} critical={1} />
+              <StatBar label="J. Morales" value={0.54} critical={1} />
+            </div>
+          </Card>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+  </script>
+</body>
+</html>
