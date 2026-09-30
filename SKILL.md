@@ -20,4 +20,4 @@ If the user invokes this skill without any other guidance, ask them what they wa
 - **Assets:** hexagon mark at `assets/logo/mobil-mark.svg` (recolor via `stroke`); condensed OTFs in `assets/fonts/`.
 - **Motifs:** 4px blue foot bar · vertical margin text · full-bleed photo + white title · solid-blue + hexagon outline · key-word-in-blue · yellow callout · visible 12-col grid.
 
-See README.md for the full content, visual, and iconography rules, plus the `ui_kits/mobil-carga` reference product and `slides/` templates.
+See README.md for the full content, visual, and iconography rules, plus the `web/ui_kits/mobil-carga` reference product and `presentaciones/` slide layouts. Brand spec: `foundations/claude-design.md`.

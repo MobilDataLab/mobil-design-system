@@ -10,6 +10,10 @@ Los archivos OTF de Swis721 BT **no se incluyen en el repositorio** por licencia
 - `Swiss721BT-BoldCondensed.otf`
 - `Swiss721BT-BlackCondensed.otf`
 
+### Swiss 721 BT completa (TTF) — `swiss721-ttf/`
+Familia de escritorio completa (Roman, Bold, Light, Black, Condensed, Extended, con cursivas), tal como llega desde el template PPT. Uso: **solo presentaciones** (títulos en Condensed Bold, subtítulos en Swiss 721 recta). Web/artefactos siguen con Archivo Narrow / Roboto.
+Códigos: `SWISS`=Roman, `B`=Bold, `L`=Light, `K`=Black, `I`/`O`=Italic/Oblique; `C`=Condensed, `E`=Extended.
+
 ### Recta (secundaria — solo cuerpo)
 Arial es system font, no requiere instalación.
 

@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Mobil Arquitectos — Presentation tokens (SOLO presentaciones PPT/HTML 1920×1080)
+   Capa sobre styles.css. NO se importa desde styles.css: web y artefactos no cambian.
+   Uso: <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../tokens/presentation.css">
+   Fuente: Template PPT (auditoría en docs/auditoria-template-ppt.md).
+   Conversión PPT→px: 1pt = 2px a 1920×1080; 1px = 6350 EMU.
+   ========================================================================== */
+
+:root {
+  /* ── Canvas ── */
+  --pres-w: 1920px;
+  --pres-h: 1080px;
+
+  /* ── Tipografía: títulos Condensed Bold, subtítulos Swiss 721, cuerpo Arial ── */
+  --pres-font-title:    "Swis721 Cn BT", "Archivo Narrow", "Arial Narrow", sans-serif;
+  --pres-font-subtitle: "Swiss 721 BT", Arial, sans-serif;
+  --pres-font-body:     Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --pres-fw-title: 700; /* @kind font */
+
+  /* ── Escala (pt del PPT × 2). Mínimo permitido: 16px (= 8pt) ── */
+  --pres-fs-cover:    88px;  /* 44pt  portada, títulos grandes */
+  --pres-fs-title:    56px;  /* 28pt  título de lámina */
+  --pres-fs-h3:       52px;  /* 26pt */
+  --pres-fs-h4:       44px;  /* 22pt */
+  --pres-fs-h5:       40px;  /* 20pt */
+  --pres-fs-lead:     32px;  /* 16pt  párrafo destacado */
+  --pres-fs-body:     24px;  /* 12pt  párrafo */
+  --pres-fs-small:    22px;  /* 11pt */
+  --pres-fs-note:     20px;  /* 10pt  notas, pies */
+  --pres-fs-caption:  18px;  /* 9pt */
+  --pres-fs-min:      16px;  /* 8pt   etiquetas, créditos; nada menor */
+  --pres-lh-title: 1.05;
+  --pres-lh-body:  1.4;
+
+  /* ── Color: azules = los del DS (5 pasos). Sin pasos nuevos. ── */
+  --pres-blue-tint:   var(--blue-tint);
+  --pres-blue-light:  var(--blue-light);
+  --pres-blue:        var(--blue);
+  --pres-blue-strong: var(--blue-strong);
+  --pres-blue-deep:   var(--blue-deep);
+  /* Del template PPT (solo presentaciones) */
+  --pres-yellow:   #FFDF04;
+  --pres-gray-50:  #F2F2F2;
+  --pres-gray-400: #BFBFBF;
+  --pres-gray-700: #7F7F7F;
+
+  /* ── Trazos: solo 3 grosores ── */
+  --pres-stroke-s: 6px;   /* 0,1 cm */
+  --pres-stroke-m: 24px;  /* 0,4 cm */
+  --pres-stroke-l: 48px;  /* 0,8 cm */
+
+  /* ── Grilla (medida en el template) ── */
+  --pres-band:     120px;  /* franja izquierda con "MOBIL ARQUITECTOS" vertical */
+  --pres-margin-x: 144px;  /* inicio de texto (139–153 en el template) */
+  --pres-margin-y: 48px;   /* etiqueta superior a y ≈ 49 */
+  --pres-col-2:    1014px; /* inicio 2.ª columna (1014–1040) */
+  --pres-col-3:    1400px; /* inicio 3.ª columna (1400–1435) */
+  --pres-gap:      24px;
+}
+
+/* ── Franja lateral vertical de marca ── */
+.pres-band {
+  position: absolute; inset: 0 auto 0 0; width: var(--pres-band);
+  display: flex; align-items: center; justify-content: center;
+}
+.pres-band > span {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: var(--pres-font-title); font-weight: var(--pres-fw-title);
+  font-size: var(--pres-fs-h5); letter-spacing: var(--tracking-vertical);
+  text-transform: uppercase; white-space: nowrap;
+}
+
+/* ── Clases de texto de presentación ── */
+.pres-title { font-family: var(--pres-font-title); font-weight: var(--pres-fw-title); font-size: var(--pres-fs-title); line-height: var(--pres-lh-title); text-transform: uppercase; margin: 0; text-wrap: balance; }
+.pres-cover { font-size: var(--pres-fs-cover); }
+.pres-subtitle { font-family: var(--pres-font-subtitle); font-weight: 400; font-size: var(--pres-fs-lead); line-height: var(--pres-lh-body); margin: 0; }
+.pres-body { font-family: var(--pres-font-body); font-size: var(--pres-fs-body); line-height: var(--pres-lh-body); margin: 0; text-wrap: pretty; }
+.pres-note { font-family: var(--pres-font-body); font-size: var(--pres-fs-min); line-height: var(--pres-lh-body); }
+.pres-stroke-s { border-top: var(--pres-stroke-s) solid var(--pres-blue); }
+.pres-stroke-m { border-top: var(--pres-stroke-m) solid var(--pres-blue); }
+.pres-stroke-l { border-top: var(--pres-stroke-l) solid var(--pres-blue); }

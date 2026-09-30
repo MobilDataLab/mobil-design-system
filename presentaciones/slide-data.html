@@ -1,45 +1,28 @@
-<!-- @dsCard group="Slides" viewport="1280x720" name="Data slide" subtitle="12-col grid, KPI numbers, yellow callout, footer bar (motifs 1,6,7)" -->
+<!-- @dsCard group="1 · Presentaciones (PPT) — Slides" viewport="1920x1080" name="Datos / KPI" subtitle="Cifras grandes en Regular, destacado amarillo, barra azul (motivos 1, 6, 7)" -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../styles.css">
-<style>
-  body { margin: 0; }
-  .slide { width: 1280px; height: 720px; background: #fff; color: var(--ink); position: relative; overflow: hidden; font-family: var(--font-body); padding: 64px 64px 0; box-sizing: border-box; }
-  .eyebrow { font-family: var(--font-heading); text-transform: uppercase; font-size: 16px; letter-spacing: 0.18em; color: var(--blue-strong); margin-bottom: 10px; }
-  .title { font-family: var(--font-heading); text-transform: uppercase; font-weight: 400; font-size: 56px; line-height: 1.0; margin: 0 0 36px; }
-  .cols { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
-  .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
-  .kpi-label { font-family: var(--font-heading); text-transform: uppercase; font-size: 15px; letter-spacing: 0.06em; color: var(--gray-700); }
-  .kpi-val { font-family: var(--font-heading); font-weight: 400; font-size: 76px; line-height: 0.95; color: var(--ink); font-variant-numeric: tabular-nums; }
-  .kpi-val .u { font-size: 26px; color: var(--gray-400); margin-left: 8px; }
-  .kpi-val.crit { color: var(--state-error); }
-  .callout { background: var(--yellow); color: var(--ink); padding: 28px 30px; align-self: start; }
-  .callout .ck { font-family: var(--font-heading); text-transform: uppercase; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; margin-bottom: 14px; }
-  .callout .ct { font-family: var(--font-heading); text-transform: uppercase; font-weight: 700; font-size: 32px; line-height: 1.12; }
-  .foot { position: absolute; left: 64px; right: 64px; bottom: 34px; display: flex; justify-content: space-between; font-family: var(--font-body); font-size: 13px; color: var(--gray-400); }
-  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--blue); }
-</style>
+<link rel="stylesheet" href="../tokens/presentation.css">
+<link rel="stylesheet" href="slide.css">
 </head>
 <body>
-  <div class="slide">
-    <div class="eyebrow">Resumen del año fiscal</div>
-    <h2 class="title">Saturación 2026</h2>
-    <div class="cols">
-      <div class="kpis">
-        <div><div class="kpi-label">Saturación prom.</div><div class="kpi-val">0.82</div></div>
-        <div><div class="kpi-label">Sobre 100%</div><div class="kpi-val crit">3<span class="u">pers.</span></div></div>
-        <div><div class="kpi-label">Personas activas</div><div class="kpi-val">12</div></div>
-        <div><div class="kpi-label">Talleres</div><div class="kpi-val">5</div></div>
-      </div>
-      <div class="callout">
-        <div class="ck">Hallazgo</div>
-        <div class="ct">TV y TC superan el umbral crítico en el segundo semestre</div>
-      </div>
-    </div>
-    <div class="foot"><span>Fuente: Mobil Carga · horas de asignación</span><span>04</span></div>
-    <div class="bar"></div>
-  </div>
+<div class="slide pad" data-screen-label="Datos">
+<div class="pres-band"><span>Mobil Arquitectos</span></div>
+<div class="eyebrow">Resumen del año fiscal</div>
+<h2 class="h2">Saturación 2026</h2>
+<div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:96px;margin-top:72px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px 72px">
+<div><div style="font-family:var(--pres-font-title);text-transform:uppercase;font-size:24px;letter-spacing:.06em;color:var(--gray-700);font-weight:700">Saturación prom.</div><div style="font-family:var(--pres-font-title);font-size:132px;line-height:.95;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:700">0.82</div></div>
+<div><div style="font-family:var(--pres-font-title);text-transform:uppercase;font-size:24px;letter-spacing:.06em;color:var(--gray-700);font-weight:700">Sobre 100%</div><div style="font-family:var(--pres-font-title);font-size:132px;line-height:.95;font-variant-numeric:tabular-nums;color:var(--state-error);font-weight:700">3<span style="font-size:40px;color:var(--gray-700);margin-left:12px">pers.</span></div></div>
+<div><div style="font-family:var(--pres-font-title);text-transform:uppercase;font-size:24px;letter-spacing:.06em;color:var(--gray-700);font-weight:700">Personas activas</div><div style="font-family:var(--pres-font-title);font-size:132px;line-height:.95;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:700">12</div></div>
+<div><div style="font-family:var(--pres-font-title);text-transform:uppercase;font-size:24px;letter-spacing:.06em;color:var(--gray-700);font-weight:700">Talleres</div><div style="font-family:var(--pres-font-title);font-size:132px;line-height:.95;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:700">5</div></div>
+</div>
+<div class="callout" style="align-self:start"><div class="k">Hallazgo</div><div class="t">TV y TC superan el umbral crítico en el segundo semestre</div></div>
+</div>
+<div class="foot"><span>Fuente: Mobil Carga · horas de asignación</span><span>04</span></div>
+<div class="bar"></div>
+</div>
 </body>
 </html>

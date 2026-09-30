@@ -1,6 +1,6 @@
 # Web
 
-Componentes React consumidos vía bundle compilado (`_ds_bundle.js`, namespace `MobilArquitectosDesignSystem_8d3ff0`).
+Componentes React consumidos vía bundle compilado (`/_ds_bundle.js`, generado en la raíz del proyecto, namespace `MobilArquitectosDesignSystem_8d3ff0`).
 
 - `components/forms/` — Button, IconButton, Input, Select, Checkbox, Radio, Switch
 - `components/feedback/` — Badge, Tag, Callout, Banner
